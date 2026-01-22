@@ -1,0 +1,167 @@
+/* Fonts & Base */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.dark {
+  background: #121212;
+  color: #f4f4f4;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dark .dark-toggle {
+  background: #333;
+  color: #f4f4f4;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.dark .card {
+  background: #1e1e1e;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Headings */
+h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+/* Inputs & Textarea */
+textarea, input[type="file"], input[type="text"], input[type="datetime-local"] {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0 15px 0;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+textarea:focus, input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 10px rgba(79,70,229,0.2);
+}
+
+.dark textarea, .dark input {
+  background: #2c2c2c;
+  color: #f4f4f4;
+  border: 1px solid #444;
+}
+
+/* Buttons */
+button {
+  padding: 14px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(79,70,229,0.3);
+}
+
+.dark button {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+}
+
+/* Results */
+#result {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Chart */
+#scoreChart {
+  border-radius: 15px;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.dark #scoreChart {
+  background: #1e1e1e;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  button, .dark-toggle {
+    width: 100%;
+    text-align: center;
+  }
+}
